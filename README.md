@@ -78,23 +78,23 @@ Derivados de la clase DbConnectionStringBuilder, existe la clases NpgsqlConnecti
 <p>
 Abrimos MonoDevelop, creamos una nueva solución GTK# y agregamos unos controles al formulario para que su aspecto luzca como en la siguiente imagen.
 </p>
-<img src="pgstrb1.png">
+<img src="images/pgstrb1.png">
 <p>
 Como utilizaremos el proveedor de datos de PostgreSQL para .NET debemos agregarlo a la solución, hacemos click derecho en la solución(recomiendo la versión 2.x).
 </p>
-<img src="pgstrb2.png">
+<img src="images/pgstrb2.png">
 <p>
 Aparecerá la ventana para agregar/quitar las referencias a los ensamblados instalados en el GAC o para buscarlos en el sistema de archivos.
 </p>
-<img src="pgstrb3.png">
+<img src="images/pgstrb3.png">
 <p>
 Una vez agregado correctamente, se mostrará el ensamblado en la solución.
 </p>
-<img src="pgstrb4.png">
+<img src="images/pgstrb4.png">
 <p align="justify">
 Dentro del método para dar funcionalidad al botón de aceptar, mostramos la utilización de la clase NpgsqlConnectionStringBuilder como ayuda para crear la cadena de conexión.
 </p>
-<img src="NpgsqlConnCode.png">
+<img src="images/NpgsqlConnCode.png">
 <p align="justify">
 También dentro de este método tenemos el código para la creación de la conexión al servidor.
 </p>
@@ -108,12 +108,12 @@ if(conn.State ==  System.Data.ConnectionState.Open)
 <p>
 Si descargamos el código completo del proyecto, al compilarlo correctamente y ejecutarlo,nos pedirá teclear los parámetros para una conexión hacia un servidor PostgreSQL.
 </p>
-<img src="pgstrb5.png">
+<img src="images/pgstrb5.png">
 <p>
 Si los parámetros son correctos y el servidor se encuentra disponible entonces la aplicación mostrará el mensaje siguiente:
 </p>
-<img src="pgstrb6.png">
+<img src="images/pgstrb6.png">
 <p>
 En caso de un parámetro incorrecto nos mostrará los mensajes de la excepción recibida.
 </p>
-<img src="pgstrb7.png">
+<img src="images/pgstrb7.png">

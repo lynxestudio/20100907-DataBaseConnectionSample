@@ -94,7 +94,17 @@ Una vez agregado correctamente, se mostrará el ensamblado en la solución.
 <p align="justify">
 Dentro del método para dar funcionalidad al botón de aceptar, mostramos la utilización de la clase NpgsqlConnectionStringBuilder como ayuda para crear la cadena de conexión.
 </p>
-<img src="images/NpgsqlConnCode.png">
+<pre>
+	NpgsqlConnectionStringBuilder connString = new NpgsqlConnectionStringBuilder();
+	connString.Host = txtServer.Text;
+	connString.Database = @txtDataBase.Text;
+	connString.UserName = @txtUserID.Text;
+	connString.Password = @txtPassWord.Text;
+	connString.Timeout = (string.IsNullOrEmpty(txtTimeOut.Text) ? 0 : Convert.ToInt32(txtTimeOut.Text));
+	connString.Pooling = this.chkPooling.Active;
+	connString.MinPoolSize = (String.IsNullOrEmpty(txtMinPool.Text) ? 0 : Convert.ToInt32(txtMinPool.Text));
+	connString.MaxPoolSize = (String.IsNullOrEmpty(txtMaxPool.Text) ? 0 : Convert.ToInt32(txtMaxPool.Text));
+</pre>
 <p align="justify">
 También dentro de este método tenemos el código para la creación de la conexión al servidor.
 </p>
